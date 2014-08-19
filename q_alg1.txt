@@ -1,0 +1,118 @@
+Is the equation `3(2x − 4) = −18` equivalent to `6x−12 = −18`?
+(Equations)
+===
+Yes, the equations are equivalent by the Associative Property of Multiplication.
+Yes, the equations are equivalent by the Commutative Property of Multiplication.
+*Yes, the equations are equivalent by the Distributive Property of Multiplication over Addition.
+No, the equations are not equivalent.
+
+`sqrt(16) + root3(8) =`
+(Exponent Expressions and Equations)
+===
+4
+*6
+9
+10
+
+Which expression is equivalent to `x^6 x^2`?
+(Exponent Expressions and Equations)
+===
+`x^4 x^3`
+*`x^5 x^3`
+`x^7 x^3`
+`x^9 x^3`
+
+Which number does <i>not</i> have a reciprocal?
+(Numbers)
+===
+-1
+*0
+`1/1000`
+3
+
+What is the multiplicative inverse of `1/2`?
+(Numbers)
+===
+-2
+`-1/2`
+`1/2`
+*2
+
+What is the solution for this equation?
+`abs(2x-3)=5`
+(Absolute Value)
+===
+`x=-4` or `x=4`
+`x=-4` or `x=3`
+*`x=-1` or `x=4`
+`x=-1` or `x=3`
+
+What is the solution set of the inequality `5-abs(x+4)≤-3`?
+(Absolute Value)
+===
+`-2≤x≤6`
+`x≤-2` or `x≥6`
+`-12≤x≤4`
+*`x≤-12` or `x≥4`
+
+Which equation is equivalent to `5x-2(7x+1)=14x`?
+(Equations)
+===
+*`-9x-2=14x`
+`-9x+1=14x`
+`-9x+2=14x`
+`12x-1=14x`
+
+Which equation is equivalent to `4(2-5x)=6-3(1-3x)`?
+(Equations)
+===
+`8x=5`
+`8x=17`
+*`29x=5`
+`29x=17`
+
+The total cost `(c)` in dollars of renting a sailboat for `n` days is given by the equation `c = 120+60n`. If the total cost was $360, for how many days was the sailboat rented?
+(Equations)
+===
+2
+*4
+6
+8
+
+Solve: `3(x+5)=2x+35`
+Step 1: `3x+15=2x+35`
+Step 2: `5x+15=35`
+Step 3: `5x=20`
+Step 4: `x=4`
+
+Which the first <i>incorrect</i> step in the solution shown above?
+(Equations)
+===
+Step 1
+*Step 2
+Step 3
+Step 4
+
+A 120-foot-long rope is cut into 3 pieces. The first piece of rope is twice as long as the second piece of rope. The third piece of rope is three times as long as the second piece of rope. What is the length of the longest piece of rope?
+(Equations)
+===
+20 feet
+40 feet
+*60 feet
+80 feet
+
+The cost to rent a construction crane is $750 per day plus $250 per hour of use. What is the maximum number of hours the crane can be used each day if the rental cost is not to exceed $2500 per day?
+(Equations)
+===
+2.5
+3.7
+*7.0
+13.0
+
+What is the solution to the inequality `x-5>14`?
+(Inequalities)
+===
+`x>9`
+`x>19`
+`x<9`
+`x<19`

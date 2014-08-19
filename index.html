@@ -1,1 +1,162 @@
-hello world
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="pure-min.css">
+<link rel="stylesheet" href="style.css">
+<script src="parse.js"></script>
+<script src="randomColor.js"></script>
+<script src="queryStringFunctions.js"></script>
+<script src="jquery-2.1.1.min.js"></script>
+<script src="jquery.animate-colors-min.js"></script>
+<script src="ASCIIMathML.js"></script>
+<script>mathcolor="black";mathfontfamily="Cambria, serif";define("white_square","\u25A1");</script>
+<script>
+var currentTeam = 0;
+var teams = [];
+
+var Team = {};
+Team.color = 'red';
+Team.name = 'Red Team';
+Team.score = 0;
+teams.push(Team);
+
+var Team = {};
+Team.color = 'purple';
+Team.name = 'Purple Team';
+Team.score = 0;
+teams.push(Team);
+
+var Team = {};
+Team.color = 'orange';
+Team.name = 'Orange Team';
+Team.score = 0;
+teams.push(Team);
+
+var Team = {};
+Team.color = 'green';
+Team.name = 'Green Team';
+Team.score = 0;
+teams.push(Team);
+
+function selectElementContents(el) {
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+}
+function sizeOfObject(obj) {
+    var size = 0, key;
+    for (key in obj) {
+        if (obj.hasOwnProperty(key)) size++;
+    }
+    return size;
+}
+function strippedAnswerOption(a) {
+	if (a.indexOf('*') == 0)
+		return a.slice(1);
+	return a;
+}
+function correctOption(options) {
+	var option = 'Z';
+	$.each(options, function(n, o) {
+		if (o.indexOf('*') == 0) {
+			if (n == 0) option = 'A';
+			if (n == 1) option = 'B';
+			if (n == 2) option = 'C';
+			if (n == 3) option = 'D';
+			if (n == 4) option = 'E';
+		}
+	});
+	return option;
+}
+function showTeams() {
+    var html = '<ul id="team-list">';
+    for (var i = 0; i < teams.length; i++) {
+        html += '<li';
+        if (i == currentTeam) {
+            html += ' class="team-current"';
+        }
+        html += '><span class="team-color" style="background-color:' + teams[i].color + ';"></span><span class="team-name">' + teams[i].name + '</span><span class="team-score">' + teams[i].score + '</span></li>';
+    }
+    html += '</ul>';
+    $('#teams').html(html);
+}
+
+var QUESTIONS;
+
+$(document).ready(function() {
+    var level = getQueryVariable('level');
+    if (!level) {
+        level = 1;
+    }
+    document.getElementById('level-select').value = level;
+    
+	var file = "q_6.txt";
+	$.get(file, function(data) {
+        QUESTIONS = parseQuestions(data);
+    	// Create the question table
+    	var html = '<table id="questions">';
+        // Add header row
+        html += '<tr>';
+        $.each(QUESTIONS, function(k) {
+            html += '<th>';
+            html += k;
+            html += '</th>';
+        });
+        html += '</tr>';
+        // Add questions
+        var levelStart = (level-1)*5;
+        var levelEnd = levelStart+5;
+        for (var currentLevel = levelStart; currentLevel < levelEnd; currentLevel++) {
+        	// Append new row for questions
+            html += '<tr>';
+            $.each(QUESTIONS, function(topic, questionArray) {
+            	html += '<td class="question"';
+                if (questionArray[currentLevel]) {
+                    var value = (currentLevel-levelStart+1)*10;
+                    var q = questionArray[currentLevel];
+                    html += ' id="' + q.qid + '">';
+                    html += '<span class="question-value">' + value + '</span>';
+                } else {
+                    html += '>n/a';
+                }
+                html += '</td>';
+            });
+            html += '</tr>';
+        }
+        html += '</table>';
+        $('#right').html(html);
+        
+        showTeams();
+        
+    });
+});
+</script>
+</head>
+<body>
+<div id="fade"></div>
+
+<div id="question-outer"><div id="question"></div></div>
+
+<div id="content">
+	<div id="left">
+		<div id="teams"></div>
+		
+		<form id="level-select-form" class="pure-form pure-form-stacked">
+			<fieldset>
+			<label for="level-select">Level:</label>
+			<select name="level-select" id="level-select">
+				<option value="1">1</option>
+				<option value="2">2</option>
+			</select>
+			<label>Teams:</label>
+			<button id="edit-teams" class="pure-button">Edit teams...</button>
+			</fieldset>
+		</form>
+	</div>
+	<div id="right"></div>
+</div>
+</body>
+<script src="on.js"></script>
+</html>

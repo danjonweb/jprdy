@@ -1,0 +1,288 @@
+At a gymnastics competition, `3/10` of the gymnasts won a ribbon. What percent of the gymnasts won a ribbon?
+(The Number System)
+===
+`3%`
+*`30%`
+`33%`
+`33 1/3%`
+
+Which list of numbers is ordered from least to greatest?
+(The Number System)
+===
+`1/2`, `2 1/2`, `0.2`, `0.002`
+`0.02`, `0.2`, `2 1/2`, `1/2`
+*`0.02`, `0.2`, `1/2`, `2 1/2`
+`0.2`, `1/2`, `0.02`, `2 1/2`
+
+Which point on the number line is greater than –4 but less than 0?
+<img src="q_6/11.png" width=380>
+(The Number System)
+===
+F
+*G
+H
+J
+
+Which equation can be used to help solve the equation below?<br><br>
+<span style="font-size:2em;">&#x25A1;</span>` xx 6 = 420`
+(The Number System)
+===
+<span style="font-size:2em;">&#x25A1;</span>` = 420 + 6`
+<span style="font-size:2em;">&#x25A1;</span>` = 420 - 6`
+<span style="font-size:2em;">&#x25A1;</span>` = 420 xx 6`
+*<span style="font-size:2em;">&#x25A1;</span>` = 420 -: 6`
+
+Which point <i>best</i> represents `-1 3/8` on the number line below?
+<img src="q_6/8.png" width=300>
+(The Number System)
+===
+point A
+*point B
+point C
+point D
+
+Jackie wants to plant `2 1/2` rows of corn in her garden. She needs `3 1/4` ounces of seed for each row. How many total ounces of seed should Jackie buy?
+(The Number System)
+===
+*`8 1/8`
+`6 1/8`
+`5 3/4`
+`5 2/6`
+
+The length of a rectangular parking lot at the airport is `2/3` mile. If the area is `1/2` square mile, what is the width of the parking lot?
+(The Number System)
+===
+`1/3` mile
+*`3/4` mile
+`1 1/6` miles
+`1 1/3` miles
+
+Which number best represents the location of point `E` on the number line below?
+<img src="q_6/4.png" width=300>
+(The Number System)
+===
+`-1.8`
+*`-1.6`
+`-1.5`
+`-1.3`
+
+The coordinates of point `A` are `(−6, 4)`. The coordinates of point `B` are `(3, 4)`. Which expression represents the distance, in units, between points `A` and `B`?
+(The Number System)
+===
+*`abs(-6) + abs(3)`
+`abs(3) - abs(-6)`
+`abs(-6) + abs(-4)`
+`abs(4) - abs(-6)`
+
+Point `G` is the point `(3,-1)`
+<img src="q_6/5.png" width=320>
+Which point is 5 units from point `G`?
+(The Number System)
+===
+point A
+*point B
+point C
+point D
+
+The area of a rectangular park is `3/5` square mile. The length of the park is `7/8` mile. What is the width of the park in miles?<br><br>
+<b>To enter a fraction, use the forward-slash (/) key.</b>
+(The Number System)
+===
+24/35
+
+Evaluate:<br>
+`6^3 + 7 xx 4`
+(Expressions & Equations)
+===
+100
+*244
+757
+892
+
+Which pair of expressions is equivalent?
+(Expressions & Equations)
+===
+`4(6x)` and `10x`
+*`4(6x)` and `24x`
+`4x + 6x` and `10x^2`
+`4x + 6x` and `24x`
+
+A printer makes more than 3 copies of a book every hour.
+<img src="q_6/3.png" width=300>
+Which graph represents the number of books made in 4 hours?
+(Expressions & Equations)
+===
+Graph A
+Graph B
+Graph C
+*Graph D
+
+What is the solution to the equation below?<br>
+`4w = 2/3`
+(Expressions & Equations)
+===
+*`w=2/12`
+`w=2/7`
+`w=8/3`
+`w=3 1/3`
+
+Which pair of expressions below is equivalent?
+(Expressions & Equations)
+===
+*`x+y+x+y` and `2(x+y)`
+`5(2x − 3y)` and `10x − 3y`
+`4x−5y` and `5y−4x`
+`9x+2y` and `11xy`
+
+Which expression represents the phrase below?<br>
+8 less than the product of 6 and a number, `x`
+(Expressions & Equations)
+===
+`8-6x`
+*`6x-8`
+`(6 + x) - 8`
+`8-(6+x)`
+
+Sarah collects stamps and keeps them in envelopes. She had 9 envelopes with a certain number of stamps, `s`, in each envelope. She sells 3 of the envelopes. Which expression represents the number of stamps Sarah has left?
+===
+`9s-3`
+`(9+3)s`
+*`9s-3s`
+`9s-s-3`
+
+In the diagram of a quadrilateral below, the variables represent the lengths of the sides, in inches.
+<img src="q_6/6.png" width=310>
+If `b=11` and `c=16`, what is the perimeter of the quadrilateral in inches?
+(Expressions & Equations)
+===
+41
+
+The table below shows the number of tea bags needed to make different amounts of iced tea.
+<img src="q_6/2.png" width=220>
+What is the total number of quarts of iced tea that can be made with 24 tea bags?
+(Ratios & Proportional Relationships)
+===
+5
+*6
+7
+8
+
+A certain map uses a scale of 1 inch equals 25 miles. How many miles are represented by 5 inches on this map?
+(Ratios & Proportional Relationships)
+===
+5
+25
+50
+*125
+
+The weekly milk order for the Tranquility Inn includes 40 gallons of low-fat milk and 15 gallons of chocolate milk. What is the ratio of the number of low-fat gallons to chocolate gallons in the Tranquility Inn's weekly milk order?
+(Ratios & Proportional Relationships)
+===
+3:1
+5:1
+5:3
+*8:3
+
+A farmer harvested 14,000 pounds of almonds from an 8-acre orchard. Which proportion could be solved to find `x`, the expected harvest from a 30-acre orchard?
+(Ratios & Proportional Relationships)
+===
+`8 / (14,000) = x/30`
+*`8 / (14,000) = 30/x`
+`30 / (14,000) = x/8`
+`30 / (14,000) = 8/x`
+
+A company makes 5 blue cars for every 3 white cars it makes. If the company makes 15 white cars in one day, how many blue cars will it make?
+(Ratios & Proportional Relationships)
+===
+9
+13
+17
+*25
+
+In a scale drawing, `1/2` inch represents 3 feet. If the same scale is used, how many inches will be needed to represent 24 feet?
+(Ratios & Proportional Relationships)
+===
+2 inches
+*4 inches
+8 inches
+12 inches
+
+A survey of 1000 registered voters revealed that 450 people would vote for candidate A in an upcoming election. If 220,000 people vote in the election, how many votes would the survey takers predict candidate A should receive?
+(Ratios & Proportional Relationships)
+===
+44,500
+48,900
+95,000
+*99,000
+
+When wheel `B` turns 2 revolutions, wheel `A` turns 5 revolutions. When wheel `A` turns 40 revolutions, how many revolutions does wheel `B` turn?
+<img src="q_6/13.png" width=280>
+(Ratios & Proportional Relationships)
+===
+4
+*16
+80
+100
+
+Jodi's car used 12 gallons of gas to travel 456 miles. How many miles did her car travel per gallon of gas? It cost Jodi $44.88 to buy 12 gallons of gas. What was the cost per gallon of gas?<br><br>
+<b>Enter two answers, separated by a space.</b>
+(Ratios & Proportional Relationships)
+===
+38 3.74
+
+A circle has a diameter, `bar(NQ)`, as shown below.
+<img src="q_6/10.png" width=180>
+The radius `bar(KP)` is 3 inches. What is the length of `bar(NQ)`?
+(Geometry)
+===
+3 inches
+4 inches
+*6 inches
+9 inches
+
+Jamie created a map for his friends. Each point on the map represents a different location.
+<img src="q_6/9.png" width=250>
+What coordinates represent Jamie’s house?
+(Geometry)
+===
+*`(2, 3)`
+`(3, 2)`
+`(3, 4)`
+`(4, 3)`
+
+What is the area of the isosceles trapezoid shown?
+<img src="q_6/1.png" width=350>
+(Geometry)
+===
+27 cm<sup>2</sup>
+33.8 cm<sup>2</sup>
+*40.5 cm<sup>2</sup>
+54 cm<sup>2</sup>
+
+Jason has a jar that holds one dime, two nickels, and one quarter. He randomly removes three coins from the jar. Which combination is <b>not</b> a possible outcome?
+(Statistics & Probability)
+===
+one dime, one nickel, and one quarter
+*one quarter and two dimes
+one dime and two nickels
+two nickels and one quarter
+
+Ben recorded the number of customers who shopped at his pet store every day for one week. The results are shown below.<br><br>
+42, 35, 56, 29, 42, 39, 23<br><br>
+What is the mean number of customers who shopped at the pet store?
+(Statistics & Probability)
+===
+33
+*38
+39
+42
+
+Diane tossed a coin 20 times. She recorded whether the coin landed heads up or tails up. The results are shown in the table below.
+<img src="q_6/12.png" width=350>
+What fraction of the coin tosses landed tails up?
+(Statistics & Probability)
+===
+`1/8`
+`2/3`
+*`2/5`
+`3/5`
