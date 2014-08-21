@@ -253,9 +253,11 @@ only screen and (                min-resolution: 2dppx)
     button.team-remove
     {
         background: url('../img/trash_48.png') no-repeat center center;
+        background-size: 24px 24px;
     }
     button.team-remove:active
     {
         background: url('../img/trash_selected_48.png') no-repeat center center;
+        background-size: 24px 24px;
     }
 }
