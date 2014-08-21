@@ -147,8 +147,8 @@ ul#team-list li
     font-size: 1em;
     line-height: 24px;
 
-    vertical-align: middle;
-
+    display: inline-block;
+    
     width: 16px;
     height: 24px;
     margin: 0 5px 0 0;
@@ -238,6 +238,9 @@ button.team-remove
 button.team-remove:active
 {
     background: url('../img/trash_selected_24.png') no-repeat center center;
+}
+span.simplecolorpicker.icon {
+    vertical-align: middle;
 }
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
