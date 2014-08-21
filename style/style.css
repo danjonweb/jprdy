@@ -1,133 +1,258 @@
-#content {
+#content
+{
     width: 80%;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
 }
-#fade {
+#fade
+{
     position: absolute;
-    left: 0%;
-    top: 0%;
+    z-index: 90;
+    top: 0;
+    left: 0;
+
+    display: none;
+
     width: 100%;
     height: 100%;
-    display: none;
+
     opacity: .70;
     background-color: black;
-    z-index: 90;
 }
 /* Used to center absolute positioned #question box. Intially hidden. */
-#question-outer {
+#question-outer
+{
     position: absolute;
-    right: 50%;
-    top: 20px;
-    width: 80%;
-    display: none;
     z-index: 100;
+    top: 20px;
+    right: 50%;
+
+    display: none;
+
+    width: 80%;
 }
 /* Where all question content goes. */
-#question {
+#question
+{
     position: relative;
     right: -50%;
-    background-color: white;
-    border: 3px solid black;
+
     padding: 10px 20px 40px;
+
+    border: 3px solid black;
+    background-color: white;
 }
 /* Just for the question text and options. The submit form is not included in this. */
-#question-inner {
+#question-inner
+{
     font-family: Cambria, serif;
 }
-#question img {
+#question img
+{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+
     margin-top: 10px;
+    margin-right: auto;
     margin-bottom: 10px;
+    margin-left: auto;
 }
 /* Each question is displayed on page with its value, text, options, and answer. All but the value is initially hidden. */
-.question-text, .question-options, .question-answer, .question-topic {
+.question-text,
+.question-options,
+.question-answer,
+.question-topic
+{
     display: none;
 }
-#answer {
-    display: none;
-    margin-left: 10px;
+#answer
+{
     font-weight: bold;
+
+    display: none;
+
+    margin-left: 10px;
 }
-table#questions {
+table#questions
+{
+    float: right;
+
     width: 70%;
     height: 100%;
-    float: right;
+
     table-layout: fixed;
-    border-collapse: separate;
     border-spacing: 10px;
+    border-collapse: separate;
 }
-table#questions th {
+table#questions th
+{
     height: 60px;
+
     vertical-align: bottom;
 }
-table#questions td.question {
+table#questions td.question
+{
     font-size: 1.5em;
-    text-align: center;
+
     cursor: pointer;
-    border-radius: 5px;
-    background-color: #5BCAFF;
-    background-image: linear-gradient(#55EFCB, #5BCAFF);
-}
-table#questions td.question-disabled {
-    font-size: 1.5em;
     text-align: center;
-    cursor: not-allowed;
+
     border-radius: 5px;
-    background-image: linear-gradient(#F7F7F7, #D7D7D7);
+    background-color: #5bcaff;
 }
-#left {
-    width: 30%;
+table#questions td.question-disabled
+{
+    font-size: 1.5em;
+
+    cursor: not-allowed;
+    text-align: center;
+
+    border-radius: 5px;
+    background-color: #d6cec3;
+}
+#left
+{
     float: left;
+
+    width: 30%;
     margin-top: 80px;
 }
-form#level-select-form {
-	color: #777;
+form#options-form
+{
     position: absolute;
     bottom: 10px;
 }
-form#level-select-form label {
-	margin-top: 10px;
+form#options-form label
+{
+    display: inline-block;
+
+    width: 50px;
+    margin-top: 10px;
+    margin-right: 5px;
+
+    text-align: right;
 }
-ul#team-list {
+ul#team-list
+{
+    margin: 0;
+    padding: 0;
+
     list-style-type: none;
-    padding: 0px;
-    margin: 0px;
 }
-ul#team-list li {
+ul#team-list li
+{
     line-height: 2em;
 }
-.team-color {
+.team-color
+{
+    font-size: 1em;
+    line-height: 24px;
+
     display: inline-block;
+
     width: 16px;
-    height: 16px;
-    margin-right: 5px;
+    height: 24px;
+    margin: 0 5px 0 0;
+    padding: 0;
 }
-.team-name {
+.team-name
+{
+    font-size: 1em;
+    line-height: 24px;
+
     display: inline-block;
+
     width: 150px;
+    height: 24px;
     margin-right: 10px;
 }
-li.team-current {
+.team-score
+{
+    font-size: 1em;
+    line-height: 24px;
+
+    display: inline-block;
+}
+li.team-current
+{
     /*font-size: 1.2em;*/
     font-weight: bold;
 }
-input.edit-team-input {
-	width: 130px;
+input,
+button
+{
+    line-height: normal;
+
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box; /* or `border-box` */
+            box-sizing: content-box;
+    height: 24px;
+    margin: 0;
+
+    vertical-align: middle;
+
+    border: 1px solid gray;
+    border-radius: 2px;
 }
-.button-xsmall {
-	font-size: 70%;
-	width: 20px;
-	padding-left:0px;
-	padding-right:0px;
-	margin-left: 5px;
-	margin-right: 5px;
+#teams input[type='text']
+{
+    width: 114px;
 }
-button#team-add {
-	margin-top: 10px;
+input
+{
+    padding: 0 .3em 0 .3em;
 }
-button#team-done {
-	margin-left: 5px;
+button
+{
+    font-size: .8em;
+    font-weight: bold;
+
+    padding: 0 .5em 0 .5em;
+
+    background-color: #f7f7f7;
+}
+button:active
+{
+    background-color: #d7d7d7;
+}
+button#team-add
+{
+    margin-top: 10px;
+}
+button#team-done
+{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+button.team-remove
+{
+    font-size: 1em;
+
+    width: 10px;
+    margin: 0 5px 0 5px;
+
+    border-width: 0;
+    background: url('../img/trash_24.png') no-repeat center center;
+    background-color: transparent;
+    background-size: 24px 24px;
+}
+button.team-remove:active
+{
+    background: url('../img/trash_selected_24.png') no-repeat center center;
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx)
+{
+    button.team-remove
+    {
+        background: url('../img/trash_48.png') no-repeat center center;
+    }
+    button.team-remove:active
+    {
+        background: url('../img/trash_selected_48.png') no-repeat center center;
+    }
 }

@@ -1,37 +1,85 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="style/pure-min.css">
+<link rel="stylesheet" href="style/normalize.css">
 <link rel="stylesheet" href="style/style.css">
 <link rel="stylesheet" href="js/simplecolorpicker/jquery.simplecolorpicker.css">
+</head>
+<body>
+<!-- Semi-transparent background for when a question is shown -->
+<div id="fade"></div>
+
+<!-- Used to show a question -->
+<div id="question-outer"><div id="question"></div></div>
+
+<!-- The main grid of topics and team info -->
+<div id="content">
+	<div id="left">
+	
+		<div id="teams"></div>
+		
+		<form id="options-form">
+			<label for="level-select">Level:</label>
+			<select name="level-select" id="level-select">
+				<option value="1">1</option>
+				<option value="2">2</option>
+			</select>
+			<br>
+			<label>Teams:</label>
+			<button id="teams-edit">Edit teams...</button>
+		</form>
+		
+	</div>
+	
+	<div id="right"></div>
+</div>
+</body>
+<script src="js/parse.js"></script>
+<script src="js/randomColor.js"></script>
+<script src="js/queryStringFunctions.js"></script>
+<script src="js/lib/jquery-2.1.1.min.js"></script>
+<script src="js/simplecolorpicker/jquery.simplecolorpicker.js"></script>
+<script src="js/jquery.animate-colors-min.js"></script>
+<script src="js/lib/ASCIIMathML.js"></script>
+<script>mathcolor="black";mathfontfamily="Cambria, serif";define("white_square","\u25A1");</script>
+<script src="js/events.js"></script>
 <script>
 
 var currentTeam = 0;
-var teams = [];
+var TEAMS = [];
+var QUESTIONS;
+var COLORSELECT = document.createElement('SELECT');
+COLORSELECT.name = 'color';
+for (var i = 0; i < Color.colors.length; i++) {
+    var option = document.createElement('OPTION');
+    option.value = Color.colors[i];
+    COLORSELECT.appendChild(option);
+}
+COLORSELECT.selectedIndex = 10;
 
 var Team = {};
-Team.color = 'red';
-Team.name = 'Red Team';
+Team.color = 26;
+Team.name = 'Tomato Team';
 Team.score = 0;
-teams.push(Team);
+TEAMS.push(Team);
 
 var Team = {};
-Team.color = 'purple';
+Team.color = 50;
 Team.name = 'Purple Team';
 Team.score = 0;
-teams.push(Team);
+TEAMS.push(Team);
 
 var Team = {};
-Team.color = 'orange';
-Team.name = 'Orange Team';
+Team.color = 32;
+Team.name = 'Gold Team';
 Team.score = 0;
-teams.push(Team);
+TEAMS.push(Team);
 
 var Team = {};
-Team.color = 'green';
-Team.name = 'Green Team';
+Team.color = 24;
+Team.name = 'Aquamarine Team';
 Team.score = 0;
-teams.push(Team);
+TEAMS.push(Team);
 
 function selectElementContents(el) {
     var range = document.createRange();
@@ -65,20 +113,39 @@ function correctOption(options) {
 	});
 	return option;
 }
-function showTeams() {
-    var html = '<ul id="team-list">';
-    for (var i = 0; i < teams.length; i++) {
-        html += '<li';
+function showTeams(is_editable) {
+    is_editable = typeof is_editable !== 'undefined' ? is_editable : false;
+        
+    var html = $('<ul id="team-list"></ul>');
+    for (var i = 0; i < TEAMS.length; i++) {
+        var itemHTML = '<li';
         if (i == currentTeam) {
-            html += ' class="team-current"';
+            itemHTML += ' class="team-current"';
         }
-        html += '><span class="team-color" style="background-color:' + teams[i].color + ';"></span><span class="team-name">' + teams[i].name + '</span><span class="team-score">' + teams[i].score + '</span></li>';
+        itemHTML += '></li>';
+        var itemNode = $(itemHTML);
+        if (is_editable) {
+            var colorSelect = COLORSELECT.cloneNode(true);
+            colorSelect.selectedIndex = TEAMS[i].color;
+            itemNode.append(colorSelect);
+            itemNode.append('<input type="text" value="' + TEAMS[i].name + '"/>');
+            itemNode.append('<button class="team-remove">&nbsp;</button>');
+        } else {
+            itemNode.append('<span class="team-color" style="background-color:' + Color.colors[TEAMS[i].color] + ';">&nbsp;</span>');
+            itemNode.append('<span class="team-name">' + TEAMS[i].name + '</span>');
+        }
+        itemNode.append('<span class="team-score">' + TEAMS[i].score + '</span>');
+        
+        html.append(itemNode);
     }
-    html += '</ul>';
+    if (is_editable) {
+        html.append('<button id="team-add" class="pure-button">Add team</button>');
+        html.append('<button id="team-done" class="pure-button">Done</button>');
+    }
     $('#teams').html(html);
+    $('#teams select[name="color"]').simplecolorpicker({picker:true});
 }
-
-var QUESTIONS;
+    
 
 $(document).ready(function() {
     var level = getQueryVariable('level');
@@ -111,6 +178,7 @@ $(document).ready(function() {
                 if (questionArray[currentLevel]) {
                     var value = (currentLevel-levelStart+1)*10;
                     var q = questionArray[currentLevel];
+                    q.value = value;
                     html += ' id="' + q.qid + '">';
                     html += '<span class="question-value">' + value + '</span>';
                 } else {
@@ -128,38 +196,4 @@ $(document).ready(function() {
     });
 });
 </script>
-</head>
-<body>
-<div id="fade"></div>
-
-<div id="question-outer"><div id="question"></div></div>
-
-<div id="content">
-	<div id="left">
-		<div id="teams"></div>
-		
-		<form id="level-select-form" class="pure-form pure-form-stacked">
-			<fieldset>
-			<label for="level-select">Level:</label>
-			<select name="level-select" id="level-select">
-				<option value="1">1</option>
-				<option value="2">2</option>
-			</select>
-			<label>Teams:</label>
-			<button id="edit-teams" class="pure-button">Edit teams...</button>
-			</fieldset>
-		</form>
-	</div>
-	<div id="right"></div>
-</div>
-</body>
-<script src="js/parse.js"></script>
-<script src="js/randomColor.js"></script>
-<script src="js/queryStringFunctions.js"></script>
-<script src="js/lib/jquery-2.1.1.min.js"></script>
-<script src="js/simplecolorpicker/jquery.simplecolorpicker.js"></script>
-<script src="js/jquery.animate-colors-min.js"></script>
-<script src="js/lib/ASCIIMathML.js"></script>
-<script>mathcolor="black";mathfontfamily="Cambria, serif";define("white_square","\u25A1");</script>
-<script src="js/events.js"></script>
 </html>
