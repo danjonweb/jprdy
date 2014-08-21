@@ -64,7 +64,7 @@ $('#level-select').change(function(){
     window.location.href = updateQueryString('level', valueSelected);
 });
 
-$('#teams-edit').on('click touchstart',function(){
+$('#teams-edit').on('touchstart click',function(){
     showTeams(true);
     return false;
 });
