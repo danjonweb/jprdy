@@ -1,7 +1,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="initial-scale=1">
 <link rel="stylesheet" href="style/normalize.css">
 <link rel="stylesheet" href="style/style.css">
 <link rel="stylesheet" href="js/simplecolorpicker/jquery.simplecolorpicker.css">
@@ -56,32 +55,45 @@ for (var i = 0; i < Color.colors.length; i++) {
     option.value = Color.colors[i];
     COLORSELECT.appendChild(option);
 }
-COLORSELECT.selectedIndex = 10;
 
 var Team = {};
-Team.color = 26;
-Team.name = 'Tomato Team';
+Team.color = randomInt(0,Color.colors.length-1);
+Team.name = 'Team 1';
 Team.score = 0;
 TEAMS.push(Team);
 
 var Team = {};
-Team.color = 50;
-Team.name = 'Purple Team';
+Team.color = randomInt(0,Color.colors.length-1);
+Team.name = 'Team 2';
 Team.score = 0;
 TEAMS.push(Team);
 
 var Team = {};
-Team.color = 32;
-Team.name = 'Gold Team';
+Team.color = randomInt(0,Color.colors.length-1);
+Team.name = 'Team 3';
 Team.score = 0;
 TEAMS.push(Team);
 
 var Team = {};
-Team.color = 24;
-Team.name = 'Aquamarine Team';
+Team.color = randomInt(0,Color.colors.length-1);
+Team.name = 'Team 4';
 Team.score = 0;
 TEAMS.push(Team);
 
+function hexdec(hex_string) {
+    if (hex_string.substr(0,1) == '#') {
+        hex_string = hex_string.substr(1);
+    }
+  hex_string = (hex_string + '').replace(/[^a-f0-9]/gi, '');
+  var result = parseInt(hex_string, 16);
+  return result;
+}
+function getContrastColor(color) {
+    return (hexdec(color) > 0xffffff/2) ? '#000000' : '#ffffff';
+}
+function randomInt(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
 function selectElementContents(el) {
     var range = document.createRange();
     range.selectNodeContents(el);
@@ -144,9 +156,14 @@ function showTeams(is_editable) {
         html.append('<button id="team-done" class="pure-button">Done</button>');
     }
     $('#teams').html(html);
-    $('#teams select[name="color"]').simplecolorpicker({picker:true});
-}
+    if (is_editable) {
+        $('#teams select[name="color"]').simplecolorpicker({picker:true});
+    }
     
+    // Update colors.
+    $('.question').css('background-color',Color.colors[TEAMS[currentTeam].color]);
+    $('.question-value').css('color',getContrastColor(Color.colors[TEAMS[currentTeam].color]));
+}
 
 $(document).ready(function() {
     var level = getQueryVariable('level');

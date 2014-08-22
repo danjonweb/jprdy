@@ -88,7 +88,6 @@ $('#teams').on('click','#team-done',function(){
     	var Team = {};
     	Team.name = nodes[i].value;
     	Team.color = nodes[i].previousSibling.previousSibling.selectedIndex;
-    	//console.log(nodes[i].previousSibling.previousSibling.selectedIndex);
     	Team.score = nodes[i].nextSibling.nextSibling.textContent;
     	TEAMS.push(Team);
     }

@@ -97,7 +97,6 @@ table#questions td.question
     text-align: center;
 
     border-radius: 5px;
-    background-color: #5bcaff;
 }
 table#questions td.question-disabled
 {
@@ -107,7 +106,7 @@ table#questions td.question-disabled
     text-align: center;
 
     border-radius: 5px;
-    background-color: #d6cec3;
+    background-color: #d6cec3 !important;
 }
 #left
 {
@@ -140,54 +139,38 @@ ul#team-list
 }
 ul#team-list li
 {
-    line-height: 2em;
+    margin-bottom: 5px;
+    vertical-align: middle;
 }
 .team-color
 {
-    font-size: 1em;
-    line-height: 24px;
-
     display: inline-block;
-    
+    vertical-align: middle;
     width: 16px;
     height: 24px;
     margin: 0 5px 0 0;
-    padding: 0;
 }
 .team-name
 {
-    font-size: 1em;
-    line-height: 24px;
-
     display: inline-block;
-
+    vertical-align: middle;
     width: 150px;
-    height: 24px;
     margin-right: 10px;
 }
 .team-score
 {
-    font-size: 1em;
-    line-height: 24px;
-
     display: inline-block;
+    vertical-align: middle;
 }
 li.team-current
 {
-    /*font-size: 1.2em;*/
     font-weight: bold;
 }
 input,
 button
 {
-    line-height: normal;
-
-    -webkit-box-sizing: content-box;
-       -moz-box-sizing: content-box; /* or `border-box` */
-            box-sizing: content-box;
     height: 24px;
-    margin: 0;
-
+    display: inline-block;
     vertical-align: middle;
 
     border: 1px solid gray;
@@ -195,19 +178,16 @@ button
 }
 #teams input[type='text']
 {
-    width: 114px;
+    width: 130px;
 }
 input
 {
-    padding: 0 .3em 0 .3em;
+    padding: 0 5px 0 5px;
 }
 button
 {
     font-size: .8em;
     font-weight: bold;
-
-    padding: 0 .5em 0 .5em;
-
     background-color: #f7f7f7;
 }
 button:active
@@ -225,11 +205,8 @@ button#team-done
 }
 button.team-remove
 {
-    font-size: 1em;
-
-    width: 10px;
+    width: 20px;
     margin: 0 5px 0 5px;
-
     border-width: 0;
     background: url('../img/trash_24.png') no-repeat center center;
     background-color: transparent;
