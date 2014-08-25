@@ -101,3 +101,14 @@ $('#teams').on('click','#team-done',function(){
 $('#teams').on('click','button.team-remove',function(){
 	$(this.parentNode).remove();
 });
+
+$('#teams').on('change', 'select', function(){
+    var li = document.querySelectorAll('#teams li');
+    for (var i = 0; i < li.length; i++) {
+        TEAMS[i].color = li[i].childNodes[0].selectedIndex;
+    }
+    
+    if ($(this.parentNode).hasClass('team-current')) {
+        showTeams(true);
+    }
+});
