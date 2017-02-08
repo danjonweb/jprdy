@@ -15,4 +15,6 @@ The format of the text file is:
     `Option 3 in backticks to get rendered as a math expression`
     `Option 4`
 
+The standard board can hold 5 questions per category. Any number of questions beyond 5 in the text file get put into the next level, which is selectable at the bottom of the screen. I never really finished the level system.
+
 Feel free to submit pull requests for question banks or anything else.
